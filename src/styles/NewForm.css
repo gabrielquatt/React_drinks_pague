@@ -1,0 +1,22 @@
+form{
+    background-color: rgb(2, 107, 42);
+    color: white;
+    margin-top: 50px;
+    margin-left: 32%;
+    margin-right: 32%;
+    padding: 20px;
+    text-align: right;
+}
+
+.inputForm{
+    color: rgb(243, 242, 242);
+    background-color: #292c28;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+}
+h2{
+    color: white;
+}
+

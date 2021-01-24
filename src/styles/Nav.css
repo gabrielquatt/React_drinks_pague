@@ -1,0 +1,26 @@
+.nav{
+    text-align: center;
+    background: rgb(36, 56, 27);
+    margin-bottom: 10px;
+    border-bottom: solid 3px rgb(72, 255, 0);
+}
+
+h1,p{
+    margin: 0%;
+    padding: 5px;
+    color: white;
+}
+
+input{
+    background-color: #1fb324;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input:hover{
+    background-color: rgb(5, 80, 5);
+}
