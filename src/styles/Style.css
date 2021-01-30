@@ -1,46 +1,27 @@
 body{
- background-color: rgb(26, 24, 24);
+  background: linear-gradient(#141E30,#000000);
  text-align: center;
  margin: 0%;
+ color: white;
 }
 
-.btn-add{
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 30px;
-    color: chartreuse;
-    background-color: rgb(141, 4, 45);
-    margin: 5px;
+ul{
+  margin: 0px;
+  padding: 0px;
 }
 
-.active,.btn-add:hover{
-    box-shadow: 0 10px 20px 0 rgba(61, 179, 7, 0.986), 0 6px 20px 0 rgba(22, 138, 6, 0.671);
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
   li {
-    float: left;
-  }
-  
-  li a {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
   }
-  
-  li a:hover:not(.active) {
-    background-color: #111;
+
+  button{
+    margin: 10px;
   }
-  
-.about{ 
-  float: right
-}
+
+  @media screen and (min-width: 992px)  { 
+    li{
+      display: inline;
+      margin: 3px;
+    }
+   }

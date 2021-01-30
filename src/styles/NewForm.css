@@ -1,21 +1,21 @@
 form{
-    background-color: rgb(2, 107, 42);
+    background: linear-gradient(#004e92, #0f3443);
     color: white;
     margin-top: 50px;
-    margin-left: 32%;
-    margin-right: 32%;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
     padding: 20px;
-    text-align: right;
+    text-align: left;
+}
+.inputColor{
+    width: auto;
 }
 
-.inputForm{
-    color: rgb(243, 242, 242);
-    background-color: #292c28;
-    border: none;
-    color: white;
-    cursor: pointer;
-    
+.btn-submit{
+    text-align: center;
 }
+
 h2{
     color: white;
 }
