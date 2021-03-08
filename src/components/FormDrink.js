@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/NewForm.css";
 
-const DrinkNew = ({onChange, onSubmit, form}) => (
+const DrinkNew = ({onChange, onSubmit, form, category}) => (
+  <React.Fragment>
   
-  <div>
     <form onSubmit={onSubmit}>
       <p>Datos de la Nueva Bebida:</p>
       <div className="form-group">
@@ -44,6 +44,27 @@ const DrinkNew = ({onChange, onSubmit, form}) => (
         />
       </div>
       <p></p>
+      <p></p>
+      
+      <div>
+        <label>CATEGORIA:</label>
+        
+        <select 
+          className="form-control"
+          autoComplete="off" 
+          name="id_category"
+          onChange={onChange}>
+
+           {category.map((c) => {
+             return (
+                <option key={c.id} value={c.id}>{c.title}</option>
+              )
+            })
+          }
+          </select>
+      </div>
+
+      <p></p>
           <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2">
       
                 <div className="col">
@@ -74,18 +95,8 @@ const DrinkNew = ({onChange, onSubmit, form}) => (
         <button type="submit" className="btn btn-primary btn-lg">Submit</button>
       </div>
     </form>
-  </div>
 
-
-      
-
-
-       
-
-
-
+  </React.Fragment>
 )
-
-
 
 export default DrinkNew;

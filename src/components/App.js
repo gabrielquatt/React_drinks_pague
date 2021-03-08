@@ -3,15 +3,15 @@ import { BrowserRouter, Route ,Switch} from 'react-router-dom'
 
 import DrinkNewContainer from '../pages/DrinkNewContainer'
 import AllDrinksContainer from '../pages/AllDrinksContainer'
-import Home from '../pages/Home'
-
+import HomeContainer from '../pages/HomeContainer'
 import NotFound from '../pages/404'
 //componente funcional 
 
 const App = () => (
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={ Home } />
+                <Route exact path="/" component={ HomeContainer } />
+                <Route exact path="/home" component={ HomeContainer } />
                 <Route exact path="/home/all" component={ AllDrinksContainer }/>
                 <Route exact path="/home/new" component={ DrinkNewContainer }/>
                 <Route component={NotFound}/>

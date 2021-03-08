@@ -1,10 +1,10 @@
 import React from "react";
-
 import imgD from "../images/empy.png";
 import "../styles/Card.css";
 
-const Card = ({ title, description, logo, leftColor, rightColor }) => (
- <div className="col">
+const Card = ({title, description, logo, leftColor, rightColor }) => (
+<React.Fragment>
+  <div className="col">
   <div
     className="container-fluid card"
     style={{
@@ -17,6 +17,7 @@ const Card = ({ title, description, logo, leftColor, rightColor }) => (
       <div className="col">
         <h1>{title || "DRINK NAME"}</h1>
         <p>{description || "description of the new drink for the website"}</p>
+    
       </div>
 
       <div className="col">
@@ -25,6 +26,7 @@ const Card = ({ title, description, logo, leftColor, rightColor }) => (
     </div>
   </div>
   </div>
+  </React.Fragment>
 );
 
 export default Card;

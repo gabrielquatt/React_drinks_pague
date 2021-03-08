@@ -4,12 +4,7 @@ import Card from "./Card";
 const CardList = ({ exercice }) => (
   <React.Fragment>
     {exercice.map((card) => {
-      return (
-        <Card
-          key={card.id} //el navegador me pide que tengan el id
-          {...card}
-        />
-      );
+      return <Card key={card.id} {...card} />;
     })}
   </React.Fragment>
 );

@@ -46,3 +46,8 @@ import App from './components/App'
 
  ReactDOM.render(<App />, container)
 
+/**
+ * para iniciar servidor de la pagina
+ * @npm start
+ * 
+ */

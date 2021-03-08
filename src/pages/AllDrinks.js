@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import CardList from "../components/CardList";
-import AddButton from "../components/AddButton";
+import AddButton from "../components/ButtonAdd";
 
 const AllDrinks = ({data}) =>(
   <React.Fragment>

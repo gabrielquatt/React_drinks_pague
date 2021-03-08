@@ -1,6 +1,4 @@
 import React from "react";
-
-import "../styles/NewForm.css";
 import Error from "./500";
 import Loading from "../components/Loading";
 import DrinksNew from "./DrinkNew";
@@ -9,13 +7,39 @@ import url from "../config";
 
 class DrinkNewContainer extends React.Component {
   state = {
+    category: [],
     form: {
       title: "",
       description: "",
       logo: "",
+      id_category: "",
+      leftColor: "",
+      rightColor: "",
     },
-    loading: false,
+    loading: true,
     error: null,
+  };
+
+  //Get All Category
+  async componentDidMount() {
+    await this.fetchCategory();
+  }
+
+  fetchCategory = async () => {
+    try {
+      let res = await fetch(url + "/api/drink/category");
+      let category = await res.json();
+
+      this.setState({
+        loading: false,
+        category,
+      });
+    } catch (error) {
+      this.setState({
+        loading: false,
+        error,
+      });
+    }
   };
 
   handleChange = (e) => {
@@ -28,13 +52,12 @@ class DrinkNewContainer extends React.Component {
     });
   };
 
+  // Guardar new Drink
   handleSubmit = async (e) => {
     this.setState({
       loading: true,
     });
-
     e.preventDefault();
-
     try {
       let config = {
         method: "POST",
@@ -47,11 +70,11 @@ class DrinkNewContainer extends React.Component {
 
       let res = await fetch(url + "/api/drink", config);
       let json = await res.json();
-      console.log(json)
+      console.log(json);
       this.setState({
         loading: false,
       });
-      this.props.history.push("../home");
+      this.props.history.push("../home"); //una vex finalizado redirecciona la pagina
     } catch (error) {
       console.log("en catch");
       this.setState({
@@ -59,8 +82,6 @@ class DrinkNewContainer extends React.Component {
         error,
       });
     }
-
-    console.log(this.state);
   };
 
   render() {
@@ -72,6 +93,7 @@ class DrinkNewContainer extends React.Component {
     }
     return (
       <DrinksNew
+        category={this.state.category}
         form={this.state.form}
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}

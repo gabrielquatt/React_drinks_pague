@@ -3,6 +3,10 @@ import reactImg from "../images/react.png";
 
 const Info = () => (
   <div className="container-fluid">
+<div>
+  <h2>React Js</h2>
+</div>
+
     <img src={reactImg} className="rounded mx-auto d-block" alt="react"></img>
     <div className="row">
       <div className="col">
